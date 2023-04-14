@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Responsive Registration Form</h1>
+        <div class="form-container">
+            <form action="#" onsubmit="return validation()">
+                <!-- email -->
+                <div class="row">
+                    <i class="fa-solid fa-envelope user"></i>
+                    <input type="email" name="" id="email" placeholder="Email" class="text"
+                        onkeyup="return regex_email(this, 'msg1')" onblur="return check_value(this, 'msg1')">
+                    <span id="msg1"></span>
+                </div>
+                <!-- password -->
+                <div class="row">
+                    <i class="fa-solid fa-lock user"></i>
+                    <input type="password" name="" id="pass" placeholder="password" class="text"
+                        onkeyup="return pass_reg_ex(this, 'msg2')" onblur="return check_value(this, 'msg2')">
+                    <span id="msg2"></span>
+                </div>
+                <!-- Re-pass -->
+                <div class="row">
+                    <i class="fa-solid fa-lock user"></i>
+                    <input type="password" name="" id="cpass" placeholder="Re-type password" class="text"
+                        onkeyup="return match_password()" onblur="return check_value(this, 'msg3')">
+                    <span id="msg3"></span>
+                </div>
+                <!-- fname & lname -->
+                <div class="flex">
+                    <div class="row">
+                        <i class="fa-solid fa-user user"></i>
+                        <input type="text" name="" id="fname" placeholder="First Name" class="name"
+                            onkeyup="return reg_ex_name(this, 'msg4')" onblur="return check_value(this, 'msg4')">
+                        <span id="msg4"></span>
+                    </div>
+                    <div class="row">
+                        <i class="fa-solid fa-user user"></i>
+                        <input type="text" name="" id="lname" placeholder="Last Name" class="name"
+                            onkeyup="return reg_ex_name(this, 'msg5')" onblur="return check_value(this, 'msg5')">
+                        <span id="msg5"></span>
+                    </div>
+                </div>
+                <!-- radio btn -->
+                <div class="row">
+                    <input type="radio" name="gender" id="male" class="r-btn">
+                    <label style="margin-right: 25px;">Male</label>
+
+                    <input type="radio" name="gender" id="female" class="r-btn">
+                    <label for="">Female</label>
+                    <span id="msg6"></span>
+                </div>
+                <!-- country -->
+                <div class="row">
+                    <select name="" id="country" class="country" onblur="return check_value(this, 'msg7')">
+                        <option value="-1">Select a Country</option>
+                        <option value="">India</option>
+                        <option value="">Canada</option>
+                        <option value="">USA</option>
+                        <option value="">Australia</option>
+                    </select>
+                    <div class="arrow"></div>
+                    <span id="msg7"></span>
+                </div>
+                <!-- I agree -->
+                <div class="row">
+                    <input type="checkbox" name="" id="cb-1">
+                    <label for="">I agree with terms and conditions</label>
+                    <span id="msg7"></span>
+                </div>
+                <!-- i want -->
+                <div class="row">
+                    <input type="checkbox" name="" id="cb-2">
+                    <label for="">I agree with terms and conditions</label>
+                    <span id="msg9"></span>
+                </div>
+                <!-- btn -->
+                <div class="row">
+                    <input type="submit" class="button" id="button" value="Register">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
